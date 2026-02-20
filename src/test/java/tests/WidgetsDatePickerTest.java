@@ -1,4 +1,4 @@
-package QABootcamo_Maven.AxsosAcademy;
+package tests;
 import org.testng.annotations.*;
 public class WidgetsDatePickerTest extends WidgetsDatePicker{
     @BeforeMethod
@@ -30,3 +30,4 @@ public class WidgetsDatePickerTest extends WidgetsDatePicker{
     }
 
 }
+
