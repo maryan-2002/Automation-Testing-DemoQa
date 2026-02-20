@@ -1,4 +1,4 @@
-package QABootcamo_Maven.AxsosAcademy;
+package pages;
 import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -39,3 +39,4 @@ public class WidgetsAutoComplete extends BaseSetup{
     }
     
 }
+
