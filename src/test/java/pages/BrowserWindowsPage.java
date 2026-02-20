@@ -1,4 +1,4 @@
-package QABootcamo_Maven.AxsosAcademy;
+package pages;
  
  
 import org.openqa.selenium.By;
@@ -56,4 +56,5 @@ public class BrowserWindowsPage extends BasePage {
             }
         }
     }
+
 }
