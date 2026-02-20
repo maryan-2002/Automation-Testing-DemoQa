@@ -1,4 +1,4 @@
-package QABootcamo_Maven.AxsosAcademy;
+package tests;
 import org.testng.annotations.*;
 public class WidgetsAccordianTest extends WidgetsAccordian{
     @BeforeMethod
@@ -23,3 +23,4 @@ public class WidgetsAccordianTest extends WidgetsAccordian{
 
 
 }
+
