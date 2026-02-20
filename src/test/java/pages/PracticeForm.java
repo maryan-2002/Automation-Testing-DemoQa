@@ -1,4 +1,4 @@
-package QABootcamo_Maven.AxsosAcademy;
+package pages;
 import java.time.Duration;
 import org.openqa.selenium.*;
 import org.openqa.selenium.JavascriptExecutor;
@@ -79,5 +79,6 @@ public class PracticeForm extends BaseSetup{
     
     
 }
+
 
 
