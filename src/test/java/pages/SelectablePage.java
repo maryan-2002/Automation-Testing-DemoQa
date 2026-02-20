@@ -1,4 +1,4 @@
-package QABootcamo_Maven.AxsosAcademy;
+package pages;
 
 
 import org.openqa.selenium.By;
@@ -42,3 +42,4 @@ public class SelectablePage extends BasePage {
     	return element.getAttribute("class").contains("active");
     }
 }
+
