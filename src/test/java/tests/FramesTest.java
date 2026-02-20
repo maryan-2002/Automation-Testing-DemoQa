@@ -1,4 +1,4 @@
-package QABootcamo_Maven.AxsosAcademy;
+package tests;
  
  
 import org.testng.Assert;
@@ -29,4 +29,5 @@ public class FramesTest extends BaseTest {
         frames.switchToDefault();
         driver.close();
     }
+
 }
