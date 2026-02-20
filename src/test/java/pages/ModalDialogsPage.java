@@ -1,4 +1,4 @@
-package QABootcamo_Maven.AxsosAcademy;
+package pages;
  
  
 import org.openqa.selenium.By;
@@ -46,4 +46,5 @@ public class ModalDialogsPage extends BasePage {
  
         jsClick(element);
     }
+
 }
