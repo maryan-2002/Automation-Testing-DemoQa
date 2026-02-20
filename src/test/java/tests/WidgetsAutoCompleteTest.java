@@ -1,4 +1,4 @@
-package QABootcamo_Maven.AxsosAcademy;
+package tests;
 import org.testng.annotations.*;
 public class WidgetsAutoCompleteTest extends WidgetsAutoComplete {
     @BeforeMethod
@@ -51,3 +51,4 @@ public class WidgetsAutoCompleteTest extends WidgetsAutoComplete {
     }
 
 }
+
