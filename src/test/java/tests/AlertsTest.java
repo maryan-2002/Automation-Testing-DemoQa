@@ -1,4 +1,4 @@
-package QABootcamo_Maven.AxsosAcademy;
+package tests;
  
  
 import org.openqa.selenium.Alert;
@@ -52,4 +52,5 @@ public class AlertsTest extends BaseTest {
         Assert.assertEquals(alerts.getPromptResult(), "You entered HII");
         driver.close();
     }
+
 }
