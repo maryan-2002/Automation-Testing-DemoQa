@@ -1,4 +1,4 @@
-package QABootcamo_Maven.AxsosAcademy;
+package tests;
 import org.testng.Assert;
 import org.testng.annotations.*;
 public class WidgetsSlidersTest extends WidgetsSliders {
@@ -39,3 +39,4 @@ public class WidgetsSlidersTest extends WidgetsSliders {
     }
 
 }
+
