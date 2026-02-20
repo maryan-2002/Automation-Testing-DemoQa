@@ -1,6 +1,6 @@
 package pages;
  
- 
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -38,5 +38,4 @@ public class SortablePage extends BasePage {
         actions.dragAndDrop(driver.findElement(item3), driver.findElement(item1)).perform();
         actions.dragAndDrop(driver.findElement(item2), driver.findElement(item1)).perform();
     }
-
 }
