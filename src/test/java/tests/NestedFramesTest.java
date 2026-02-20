@@ -1,4 +1,4 @@
-package QABootcamo_Maven.AxsosAcademy;
+package tests;
  
  
 import org.testng.annotations.Test;
@@ -25,4 +25,5 @@ public class NestedFramesTest extends BaseTest {
         driver.switchTo().defaultContent();
         driver.close();
     }
+
 }
