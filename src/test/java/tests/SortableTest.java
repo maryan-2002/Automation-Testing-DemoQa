@@ -1,4 +1,4 @@
-package QABootcamo_Maven.AxsosAcademy;
+package tests;
  
  
 import org.testng.annotations.Test;
@@ -21,4 +21,5 @@ public class SortableTest extends BaseTest {
         Thread.sleep(2000);
         driver.close();
     }
+
 }
