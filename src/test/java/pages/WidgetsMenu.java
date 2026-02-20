@@ -1,4 +1,4 @@
-package QABootcamo_Maven.AxsosAcademy;
+package pages;
 
 import java.time.Duration;
 import org.openqa.selenium.By;
@@ -42,3 +42,4 @@ public class WidgetsMenu extends BaseSetup{
         return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[text()='Sub Sub Item 1']"))).isDisplayed();
     }
 }
+
