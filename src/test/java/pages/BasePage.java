@@ -1,4 +1,4 @@
-package QABootcamo_Maven.AxsosAcademy;
+package pages;
  
  
 import java.time.Duration;
@@ -22,4 +22,5 @@ public class BasePage {
             .executeScript("arguments[0].click();", element);
     }
  
+
 }
