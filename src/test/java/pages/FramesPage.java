@@ -1,4 +1,4 @@
-package QABootcamo_Maven.AxsosAcademy;
+package pages;
 
 
 import org.openqa.selenium.By;
@@ -30,3 +30,4 @@ public class FramesPage extends BasePage {
         driver.switchTo().defaultContent();
     }
 }
+
