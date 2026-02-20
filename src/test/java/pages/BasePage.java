@@ -22,5 +22,4 @@ public class BasePage {
             .executeScript("arguments[0].click();", element);
     }
  
-
 }
