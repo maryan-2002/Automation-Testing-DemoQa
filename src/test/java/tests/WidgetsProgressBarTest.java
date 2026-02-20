@@ -1,4 +1,4 @@
-package QABootcamo_Maven.AxsosAcademy;
+package tests;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
@@ -37,3 +37,4 @@ public class WidgetsProgressBarTest extends WidgetsProgressBar{
         driver.quit();
     }
 }
+
