@@ -1,4 +1,4 @@
-package QABootcamo_Maven.AxsosAcademy;
+package tests;
 
 import org.testng.Assert;
 import org.testng.annotations.*;
@@ -40,3 +40,4 @@ public class WidgetsToolTipTest extends WidgetsToolTip {
         driver.quit();
     }
 }
+
