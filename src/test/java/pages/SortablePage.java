@@ -1,4 +1,4 @@
-package QABootcamo_Maven.AxsosAcademy;
+package pages;
  
  
 import org.openqa.selenium.By;
@@ -38,4 +38,5 @@ public class SortablePage extends BasePage {
         actions.dragAndDrop(driver.findElement(item3), driver.findElement(item1)).perform();
         actions.dragAndDrop(driver.findElement(item2), driver.findElement(item1)).perform();
     }
+
 }
