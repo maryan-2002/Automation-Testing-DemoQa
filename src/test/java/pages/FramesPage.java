@@ -30,4 +30,3 @@ public class FramesPage extends BasePage {
         driver.switchTo().defaultContent();
     }
 }
-
