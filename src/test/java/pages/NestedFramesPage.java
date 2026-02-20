@@ -1,4 +1,4 @@
-package QABootcamo_Maven.AxsosAcademy;
+package pages;
 
 
 import org.openqa.selenium.By;
@@ -30,3 +30,4 @@ public class NestedFramesPage extends BasePage {
         return driver.findElement(By.tagName("body")).getText();
     }
 }
+
