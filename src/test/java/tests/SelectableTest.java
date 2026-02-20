@@ -1,4 +1,4 @@
-package QABootcamo_Maven.AxsosAcademy;
+package tests;
  
  
 import org.testng.Assert;
@@ -30,4 +30,5 @@ public class SelectableTest extends BaseTest {
         System.out.println("Grid item selected successfully");
         driver.close();
     }
+
 }
