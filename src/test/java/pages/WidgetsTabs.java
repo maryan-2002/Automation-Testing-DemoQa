@@ -1,4 +1,4 @@
-package QABootcamo_Maven.AxsosAcademy;
+package pages;
 import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -44,3 +44,4 @@ public class WidgetsTabs extends BaseSetup {
         return driver.findElement(By.id("demo-tab-use")).isDisplayed();
     }
 }
+
