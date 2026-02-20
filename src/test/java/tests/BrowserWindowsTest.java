@@ -1,4 +1,4 @@
-package QABootcamo_Maven.AxsosAcademy;
+package tests;
  
  
 import java.time.Duration;
@@ -84,5 +84,6 @@ public class BrowserWindowsTest extends BaseTest {
     }
 
 }
+
 
  
