@@ -10,8 +10,13 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import java.time.Duration;
 
 public class BaseTest {
-    protected WebDriver driver;
-    WebDriverWait wait;
+	
+	private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+    protected WebDriverWait wait;
+
+    public WebDriver getDriver() {
+        return driver.get();
+    }
     @BeforeMethod
     public void setup() {
 
@@ -20,15 +25,16 @@ public class BaseTest {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
 
-        driver = new ChromeDriver(options);
-        driver.manage().window().maximize();
-        driver.manage().deleteAllCookies();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        driver.get("https://demoqa.com/");   
+        driver.set(new ChromeDriver(options));
+        getDriver().manage().window().maximize();
+        getDriver().manage().deleteAllCookies();
+        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        getDriver().get("https://demoqa.com/");   
     }
 
     @AfterMethod
     public void tearDown() {
-        driver.quit();
+    	getDriver().quit();
+    	driver.remove();
     }
 }

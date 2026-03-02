@@ -5,16 +5,18 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
  
 import base.BaseTest;
+import pages.HomePage;
+import pages.SelectablePage;
  
 public class SelectableTest extends BaseTest {
  
     @Test
     public void testSelectable() throws InterruptedException {
  
-        HomePage home = new HomePage(driver);
+        HomePage home = new HomePage(getDriver());
         home.clickCard("Interactions");
  
-        SelectablePage selectable = new SelectablePage(driver);
+        SelectablePage selectable = new SelectablePage(getDriver());
         selectable.openMenu();
         Thread.sleep(5000);
  
@@ -28,7 +30,7 @@ public class SelectableTest extends BaseTest {
         Assert.assertTrue(selectable.isGridItemActive(),
                 "Grid item is not active");
         System.out.println("Grid item selected successfully");
-        driver.close();
+        getDriver().close();
     }
 
 }

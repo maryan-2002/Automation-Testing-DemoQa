@@ -3,6 +3,8 @@ package tests;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
+import pages.WidgetsMenu;
+
 public class WidgetsMenuTest extends WidgetsMenu {
 
     @BeforeMethod
@@ -24,7 +26,7 @@ public class WidgetsMenuTest extends WidgetsMenu {
     }
     @AfterMethod
     public void quitDemoQA(){
-        driver.quit();
+    	getDriver().quit();
     }
 }
 

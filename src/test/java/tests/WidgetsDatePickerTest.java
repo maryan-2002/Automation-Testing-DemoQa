@@ -1,5 +1,7 @@
 package tests;
 import org.testng.annotations.*;
+
+import pages.WidgetsDatePicker;
 public class WidgetsDatePickerTest extends WidgetsDatePicker{
     @BeforeMethod
     public void setup(){
@@ -26,7 +28,7 @@ public class WidgetsDatePickerTest extends WidgetsDatePicker{
     }
     @AfterMethod
     public void quitDemoQA(){
-        driver.quit();
+    	getDriver().quit();
     }
 
 }

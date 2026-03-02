@@ -1,6 +1,8 @@
 package tests;
 import org.testng.Assert;
 import org.testng.annotations.*;
+
+import pages.WidgetsSliders;
 public class WidgetsSlidersTest extends WidgetsSliders {
     @BeforeMethod
     public void setup(){
@@ -35,7 +37,7 @@ public class WidgetsSlidersTest extends WidgetsSliders {
     }
     @AfterMethod
     public void quitDemoQA(){
-        driver.quit();
+    	getDriver().quit();
     }
 
 }

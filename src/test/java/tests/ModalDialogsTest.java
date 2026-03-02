@@ -4,6 +4,8 @@ package tests;
 import org.testng.annotations.Test;
  
 import base.BaseTest;
+import pages.HomePage;
+import pages.ModalDialogsPage;
  
 public class ModalDialogsTest extends BaseTest {
  
@@ -11,11 +13,11 @@ public class ModalDialogsTest extends BaseTest {
 
     public void testModalDialogs() throws InterruptedException {
  
-        HomePage home = new HomePage(driver);
+        HomePage home = new HomePage(getDriver());
 
         home.clickCard("Alerts, Frame & Windows");
  
-        ModalDialogsPage modal = new ModalDialogsPage(driver);
+        ModalDialogsPage modal = new ModalDialogsPage(getDriver());
 
         modal.openMenu();
 
@@ -33,7 +35,7 @@ public class ModalDialogsTest extends BaseTest {
 
         modal.closeModal();
 
-        driver.close();
+        getDriver().close();
 
     }
 

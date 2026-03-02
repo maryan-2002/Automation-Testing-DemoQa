@@ -1,6 +1,8 @@
 package tests;
 import org.testng.Assert;
 import org.testng.annotations.*;
+
+import pages.WidgetsTabs;
 public class WidgetsTabsTest extends WidgetsTabs {
     @BeforeMethod
     public void setup() {
@@ -17,7 +19,7 @@ public class WidgetsTabsTest extends WidgetsTabs {
     }
     @AfterMethod
     public void quitDemoQA(){
-        driver.quit();
+    	getDriver().quit();
     }
 }
 

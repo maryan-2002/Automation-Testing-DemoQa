@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+
+import base.BasePage;
  
 public class ModalDialogsPage extends BasePage {
  
@@ -18,7 +20,7 @@ public class ModalDialogsPage extends BasePage {
     By closeBtn = By.cssSelector(".modal-content .btn-close");
  
     public void openMenu() {
-        jsClick(driver.findElement(modalMenu));
+        jsClick(getDriver().findElement(modalMenu));
     }
  
     public void openSmallModal() {

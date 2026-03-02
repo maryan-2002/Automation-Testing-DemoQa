@@ -13,12 +13,12 @@ public class CheckBoxTest extends BaseTest {
 
     public void verifySelectHomeCheckbox() throws InterruptedException {
 
-        checkBox = new CheckBoxPage(driver);
+        checkBox = new CheckBoxPage(getDriver());
         checkBox.navigateToCheckbox();
         Thread.sleep(5000);
         checkBox.clickExpandAll();
         Thread.sleep(5000);
-        driver.close();
+        getDriver().close();
  
      
 

@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+
+import base.BasePage;
  
 public class SortablePage extends BasePage {
  
@@ -32,10 +34,10 @@ public class SortablePage extends BasePage {
     }
 // to reverse the order in the list 
     public void reverseList() {
-        actions.dragAndDrop(driver.findElement(item6), driver.findElement(item1)).perform();
-        actions.dragAndDrop(driver.findElement(item5), driver.findElement(item1)).perform();
-        actions.dragAndDrop(driver.findElement(item4), driver.findElement(item1)).perform();
-        actions.dragAndDrop(driver.findElement(item3), driver.findElement(item1)).perform();
-        actions.dragAndDrop(driver.findElement(item2), driver.findElement(item1)).perform();
+        actions.dragAndDrop(getDriver().findElement(item6), getDriver().findElement(item1)).perform();
+        actions.dragAndDrop(getDriver().findElement(item5), getDriver().findElement(item1)).perform();
+        actions.dragAndDrop(getDriver().findElement(item4), getDriver().findElement(item1)).perform();
+        actions.dragAndDrop(getDriver().findElement(item3), getDriver().findElement(item1)).perform();
+        actions.dragAndDrop(getDriver().findElement(item2), getDriver().findElement(item1)).perform();
     }
 }

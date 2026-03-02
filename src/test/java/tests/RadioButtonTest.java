@@ -8,14 +8,11 @@ import pages.RadioButtonPage;
 public class RadioButtonTest extends BaseTest{
 	RadioButtonPage radioPage;
 
-    // ============================
-    // TC_EL_005
-    // ============================
 
     @Test
     public void verifySelectingYesRadioButton() {
 
-        radioPage = new RadioButtonPage(driver);
+        radioPage = new RadioButtonPage(getDriver());
 
         radioPage.navigateToRadioButton();
 
@@ -27,14 +24,10 @@ public class RadioButtonTest extends BaseTest{
                 "Message is NOT displaying 'Yes'");
     }
 
-    // ============================
-    // TC_EL_006
-    // ============================
-
     @Test
     public void verifyNoRadioButtonIsDisabled() {
 
-        radioPage = new RadioButtonPage(driver);
+        radioPage = new RadioButtonPage(getDriver());
 
         radioPage.navigateToRadioButton();
 

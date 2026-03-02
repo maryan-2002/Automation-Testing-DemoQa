@@ -1,5 +1,7 @@
 package tests;
 import org.testng.annotations.*;
+
+import pages.WidgetsAccordian;
 public class WidgetsAccordianTest extends WidgetsAccordian{
     @BeforeMethod
     public void setup(){
@@ -15,9 +17,10 @@ public class WidgetsAccordianTest extends WidgetsAccordian{
     	clickSecondAccordion();
     	clickSecondAccordion();
     }
+    
     @AfterMethod
     public void quitDemoQA(){
-        driver.quit();
+    	getDriver().quit();
     }
 
 

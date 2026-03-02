@@ -3,6 +3,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import base.BasePage;
+
 public class HomePage extends BasePage {
 
     public HomePage(WebDriver driver) {
@@ -10,7 +12,7 @@ public class HomePage extends BasePage {
     }
 //To click on a category card on the home page we need like Interactions and Alerts, Frame & Windows
     public void clickCard(String cardName) {
-        WebElement card = driver.findElement(
+        WebElement card = getDriver().findElement(
                 By.xpath("//div[@class='card-body']/h5[text()='" + cardName + "']")
         );
         jsClick(card);

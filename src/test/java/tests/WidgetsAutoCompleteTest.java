@@ -1,5 +1,7 @@
 package tests;
 import org.testng.annotations.*;
+
+import pages.WidgetsAutoComplete;
 public class WidgetsAutoCompleteTest extends WidgetsAutoComplete {
     @BeforeMethod
     public void setup(){
@@ -47,7 +49,7 @@ public class WidgetsAutoCompleteTest extends WidgetsAutoComplete {
     }
     @AfterMethod
     public void quitDemoQA(){
-        driver.quit();
+    	getDriver().quit();
     }
 
 }

@@ -4,6 +4,8 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import base.BasePage;
+
 public class NestedFramesPage extends BasePage {
 
     public NestedFramesPage(WebDriver driver) {
@@ -15,19 +17,19 @@ public class NestedFramesPage extends BasePage {
     By childFrame = By.tagName("iframe");
 
     public void openMenu() {
-        jsClick(driver.findElement(nestedFramesMenu));
+        jsClick(getDriver().findElement(nestedFramesMenu));
     }
 
     public void switchToParentFrame() {
-        driver.switchTo().frame(driver.findElement(parentFrame));
+    	getDriver().switchTo().frame(getDriver().findElement(parentFrame));
     }
 
     public void switchToChildFrame() {
-        driver.switchTo().frame(driver.findElement(childFrame));
+    	getDriver().switchTo().frame(getDriver().findElement(childFrame));
     }
 
     public String getBodyText() {
-        return driver.findElement(By.tagName("body")).getText();
+        return getDriver().findElement(By.tagName("body")).getText();
     }
 }
 

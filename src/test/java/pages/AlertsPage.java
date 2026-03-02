@@ -8,6 +8,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import org.openqa.selenium.support.ui.ExpectedConditions;
+
+import base.BasePage;
  
 public class AlertsPage extends BasePage {
  
@@ -33,7 +35,7 @@ public class AlertsPage extends BasePage {
 
     public void openMenu() {
 
-        jsClick(driver.findElement(alertsMenu));
+        jsClick(getDriver().findElement(alertsMenu));
 
     }
 
@@ -41,7 +43,7 @@ public class AlertsPage extends BasePage {
 
     public void clickSimpleAlert() {
 
-        driver.findElement(simpleAlert).click();
+    	getDriver().findElement(simpleAlert).click();
 
     }
 
@@ -62,7 +64,7 @@ public class AlertsPage extends BasePage {
 
     public String getConfirmResult() {
 
-        return driver.findElement(confirmResult).getText();
+        return getDriver().findElement(confirmResult).getText();
 
     }
 
@@ -80,7 +82,7 @@ public class AlertsPage extends BasePage {
  
     public String getPromptResult() {
 
-        return driver.findElement(promptResult).getText();
+        return getDriver().findElement(promptResult).getText();
 
     }
 

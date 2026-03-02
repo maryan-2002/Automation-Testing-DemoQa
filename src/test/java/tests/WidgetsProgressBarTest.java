@@ -6,6 +6,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.*;
+
+import pages.WidgetsProgressBar;
 public class WidgetsProgressBarTest extends WidgetsProgressBar{
     @BeforeMethod
     public void setup() {
@@ -23,7 +25,7 @@ public class WidgetsProgressBarTest extends WidgetsProgressBar{
     @Test
     public void TC_WDG_020_Verify_progress_bar_stops_when_clicking_Stop_button()   {
         clickStartStopButton();
-        WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(5));
+        WebDriverWait wait=new WebDriverWait(getDriver(), Duration.ofSeconds(5));
         String startedValue=getProgressValue();
         wait.until(ExpectedConditions.not(ExpectedConditions.attributeToBe(By.xpath("//div[@role='progressbar']"),"aria-valuenow",startedValue)));
         clickStartStopButton();
@@ -34,7 +36,7 @@ public class WidgetsProgressBarTest extends WidgetsProgressBar{
     }
     @AfterMethod
     public void quitDemoQA(){
-        driver.quit();
+    	getDriver().quit();
     }
 }
 

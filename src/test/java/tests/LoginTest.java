@@ -11,12 +11,10 @@ public class LoginTest extends BaseTest {
 
     LoginPage loginPage;
 
-    // ============================
-    // TC_BS_001 - Valid Login
-    // ============================
+    //valid login
     @Test
     public void verifyLoginWithValidCredentials() {
-        loginPage = new LoginPage(driver);
+        loginPage = new LoginPage(getDriver());
         loginPage.navigateToLogin();
 
         loginPage.enterUsername("validUser");
@@ -26,12 +24,10 @@ public class LoginTest extends BaseTest {
         Assert.assertTrue(loginPage.isProfilePageDisplayed());
     }
 
-    // ============================
-    // TC_BS_002 - Invalid Password
-    // ============================
+    //invalid pass
     @Test
     public void verifyLoginFailsWithInvalidPassword() {
-        loginPage = new LoginPage(driver);
+        loginPage = new LoginPage(getDriver());
         loginPage.navigateToLogin();
 
         loginPage.enterUsername("validUser");
@@ -42,12 +38,10 @@ public class LoginTest extends BaseTest {
                 "Error message not displayed for invalid password!");
     }
 
-    // ============================
-    // TC_BS_003 - Empty Fields
-    // ============================
+    //empty fields
     @Test
     public void verifyLoginWithEmptyFields() {
-        loginPage = new LoginPage(driver);
+        loginPage = new LoginPage(getDriver());
         loginPage.navigateToLogin();
 
         loginPage.enterUsername("");
@@ -59,12 +53,10 @@ public class LoginTest extends BaseTest {
         Assert.assertTrue(loginPage.isFieldMarkedAsRequired(By.id("password")),
                 "Password field did NOT trigger required validation!");
     }
-    // ============================
-    // TC_BS_004 - Logout
-    // ============================
+    //logout
     @Test
     public void verifyLogoutFunctionality() {
-        loginPage = new LoginPage(driver);
+        loginPage = new LoginPage(getDriver());
         loginPage.navigateToLogin();
 
         loginPage.enterUsername("validUser");

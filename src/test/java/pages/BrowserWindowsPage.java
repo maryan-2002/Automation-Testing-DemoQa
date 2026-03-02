@@ -5,7 +5,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
- 
+
+import base.BasePage;
+
 import java.util.Set;
  
 public class BrowserWindowsPage extends BasePage {
@@ -20,7 +22,7 @@ public class BrowserWindowsPage extends BasePage {
     By messageWindowBtn = By.id("messageWindowButton");
 // to click on the browser window button
     public void openMenu() {
-        jsClick(driver.findElement(browserWindowsMenu));
+        jsClick(getDriver().findElement(browserWindowsMenu));
     }
  
     public void clickNewTab() {
@@ -38,7 +40,7 @@ public class BrowserWindowsPage extends BasePage {
     }
  
     public void clickMessageWindow() {
-        driver.findElement(messageWindowBtn).click();
+    	getDriver().findElement(messageWindowBtn).click();
         WebElement element =
                 wait.until(ExpectedConditions.visibilityOfElementLocated(messageWindowBtn));
  
@@ -46,12 +48,12 @@ public class BrowserWindowsPage extends BasePage {
     }
  
     public void switchToNewWindow() {
-        String parent = driver.getWindowHandle();
-        Set<String> handles = driver.getWindowHandles();
+        String parent = getDriver().getWindowHandle();
+        Set<String> handles = getDriver().getWindowHandles();
  
         for (String h : handles) {
             if (!h.equals(parent)) {
-                driver.switchTo().window(h);
+            	getDriver().switchTo().window(h);
                 break;
             }
         }

@@ -4,6 +4,8 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import base.BasePage;
+
 public class FramesPage extends BasePage {
 
     public FramesPage(WebDriver driver) {
@@ -15,18 +17,18 @@ public class FramesPage extends BasePage {
     By frame2 = By.id("frame2");
 
     public void openMenu() {
-        jsClick(driver.findElement(framesMenu));
+        jsClick(getDriver().findElement(framesMenu));
     }
 
     public void switchToFrame1() {
-        driver.switchTo().frame(driver.findElement(frame1));
+    	getDriver().switchTo().frame(getDriver().findElement(frame1));
     }
 
     public void switchToFrame2() {
-        driver.switchTo().frame(driver.findElement(frame2));
+    	getDriver().switchTo().frame(getDriver().findElement(frame2));
     }
 
     public void switchToDefault() {
-        driver.switchTo().defaultContent();
+    	getDriver().switchTo().defaultContent();
     }
 }

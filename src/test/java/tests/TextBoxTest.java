@@ -8,15 +8,12 @@ public class TextBoxTest extends BaseTest{
 	
 	TextBoxPage textBox;
 
-    // ============================
-    // TC_EL_001 - Positive Test
-    // ============================
-
-    @Test
+	//positive test
+	@Test
     public void verifySubmitTextBoxWithValidData() throws InterruptedException {
     	System.out.println("I AM INSIDE TEST");
         
-        textBox = new TextBoxPage(driver);
+        textBox = new TextBoxPage(getDriver());
 
         textBox.navigateToTextBox();
        // driver.findElement(By.id("item-0")).click();
@@ -36,13 +33,10 @@ public class TextBoxTest extends BaseTest{
                 "Output section is NOT displayed!");
     }
 
-    // ============================
-    // TC_EL_002 - Negative Test
-    // ============================
-
+    //Negative Test
     @Test
     public void verifyInvalidEmailValidation() {
-        textBox = new TextBoxPage(driver);
+        textBox = new TextBoxPage(getDriver());
 
         // Navigate to Text Box page
         textBox.navigateToTextBox();

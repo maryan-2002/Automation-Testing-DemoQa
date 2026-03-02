@@ -11,14 +11,12 @@ import pages.WebTablesPage;
 public class WebTablesTest extends BaseTest {
 	 WebTablesPage webTable;
 
-	    // ============================
-	    // TC_EL_007 - Add Record
-	    // ============================
 
+	    //Add Record
 	@Test
 	 public void verifyAddingNewRecord() {
 
-	     webTable = new WebTablesPage(driver);
+	     webTable = new WebTablesPage(getDriver());
 
 	     webTable.navigateToWebTables();
 	     webTable.clickAdd();
@@ -29,14 +27,11 @@ public class WebTablesTest extends BaseTest {
 	     Assert.assertTrue(webTable.isEmailDisplayed("john@test.com"),"Record was NOT found after adding!");
 	     }
 
-	    // ============================
-	    // TC_EL_008 - Edit Record
-	    // ============================
-
+	    //Edit Record
 	    @Test
 	    public void verifyEditingRecord() {
 
-	        webTable = new WebTablesPage(driver);
+	        webTable = new WebTablesPage(getDriver());
 
 	        webTable.navigateToWebTables();
 
@@ -56,14 +51,11 @@ public class WebTablesTest extends BaseTest {
 	                "Record was NOT updated successfully!");
 	    }
 
-	    // ============================
-	    // TC_EL_009 - Delete Record
-	    // ============================
-
+	    //Delete Record
 	    @Test
 	    public void verifyDeletingRecord() {
 
-	        webTable = new WebTablesPage(driver);
+	        webTable = new WebTablesPage(getDriver());
 	        webTable.navigateToWebTables();
 	        // Add record first
 	        webTable.clickAdd();

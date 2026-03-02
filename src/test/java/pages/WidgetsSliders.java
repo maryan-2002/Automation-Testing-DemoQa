@@ -7,23 +7,25 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import base.BaseSetup;
+
 public class WidgetsSliders extends BaseSetup {
 	public void openSliders() {
         startBrowser();
         NavigateWidgets();
-        WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(10));
+        WebDriverWait wait=new WebDriverWait(getDriver(),Duration.ofSeconds(10));
         WebElement Sliders=wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[text()='Slider']")));
-        ((JavascriptExecutor)driver).executeScript("arguments[0].click();", Sliders);
+        ((JavascriptExecutor)getDriver()).executeScript("arguments[0].click();", Sliders);
     }
 	public void typeSliderValue(String value) {
-		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebDriverWait wait=new WebDriverWait(getDriver(), Duration.ofSeconds(10));
         WebElement sliderInput=wait.until(ExpectedConditions.elementToBeClickable(By.id("sliderValue")));
         sliderInput.sendKeys(Keys.chord(Keys.CONTROL, "a"));
         sliderInput.sendKeys(value);
         sliderInput.sendKeys(Keys.ENTER);
 	}
 	public String getSliderValue() {
-        return driver.findElement(By.id("sliderValue")).getAttribute("value");
+        return getDriver().findElement(By.id("sliderValue")).getAttribute("value");
 	}
 	
 	

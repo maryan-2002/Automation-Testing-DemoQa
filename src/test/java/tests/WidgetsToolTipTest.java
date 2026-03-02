@@ -3,6 +3,8 @@ package tests;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
+import pages.WidgetsToolTip;
+
 public class WidgetsToolTipTest extends WidgetsToolTip {
 
     @BeforeMethod
@@ -37,7 +39,7 @@ public class WidgetsToolTipTest extends WidgetsToolTip {
     }
     @AfterMethod
     public void quitDemoQA(){
-        driver.quit();
+    	getDriver().quit();
     }
 }
 

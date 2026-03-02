@@ -10,6 +10,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
  
 import base.BaseTest;
+import pages.BrowserWindowsPage;
+import pages.HomePage;
  
 public class BrowserWindowsTest extends BaseTest {
  
@@ -17,13 +19,14 @@ public class BrowserWindowsTest extends BaseTest {
 
     public void testBrowserWindows() throws InterruptedException {
  
-        HomePage home = new HomePage(driver);
+        HomePage home = new HomePage(getDriver());
+        
 
         // click on the category 
 
         home.clickCard("Alerts, Frame & Windows");
 
-        BrowserWindowsPage page = new BrowserWindowsPage(driver);
+        BrowserWindowsPage page = new BrowserWindowsPage(getDriver());
 
         Thread.sleep(5000);
 
@@ -31,7 +34,7 @@ public class BrowserWindowsTest extends BaseTest {
 
         Thread.sleep(5000);
 
-        String parent = driver.getWindowHandle();
+        String parent = getDriver().getWindowHandle();
  
         // new tab
 
@@ -41,13 +44,13 @@ public class BrowserWindowsTest extends BaseTest {
 
         page.switchToNewWindow();
 
-        Assert.assertTrue(driver.getCurrentUrl().contains("sample"));
+        Assert.assertTrue(getDriver().getCurrentUrl().contains("sample"));
 
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        new WebDriverWait(getDriver(), Duration.ofSeconds(10));
  
-        driver.close();
+        getDriver().close();
 
-        driver.switchTo().window(parent);
+        getDriver().switchTo().window(parent);
  
         // new window
 
@@ -57,13 +60,13 @@ public class BrowserWindowsTest extends BaseTest {
 
         page.switchToNewWindow();
 
-        Assert.assertTrue(driver.getCurrentUrl().contains("sample"));
+        Assert.assertTrue(getDriver().getCurrentUrl().contains("sample"));
 
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        new WebDriverWait(getDriver(), Duration.ofSeconds(10));
  
-        driver.close();
+        getDriver().close();
 
-        driver.switchTo().window(parent);
+        getDriver().switchTo().window(parent);
 
         //new window msg
 
@@ -73,13 +76,13 @@ public class BrowserWindowsTest extends BaseTest {
 
         page.switchToNewWindow();
 
-        driver.close();
+        getDriver().close();
 
-        driver.switchTo().window(parent);
+        getDriver().switchTo().window(parent);
 
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        new WebDriverWait(getDriver(), Duration.ofSeconds(10));
  
-        driver.close();
+        getDriver().close();
 
     }
 

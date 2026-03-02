@@ -4,16 +4,18 @@ package tests;
 import org.testng.annotations.Test;
  
 import base.BaseTest;
+import pages.HomePage;
+import pages.NestedFramesPage;
  
 public class NestedFramesTest extends BaseTest {
  
     @Test
     public void testNestedFrames() throws InterruptedException {
  
-        HomePage home = new HomePage(driver);
+        HomePage home = new HomePage(getDriver());
         home.clickCard("Alerts, Frame & Windows");
  
-        NestedFramesPage page = new NestedFramesPage(driver);
+        NestedFramesPage page = new NestedFramesPage(getDriver());
         page.openMenu();
         Thread.sleep(5000);
         page.switchToParentFrame();
@@ -22,8 +24,8 @@ public class NestedFramesTest extends BaseTest {
         page.switchToChildFrame();
         System.out.println("Child Text: " + page.getBodyText());
  
-        driver.switchTo().defaultContent();
-        driver.close();
+        getDriver().switchTo().defaultContent();
+        getDriver().close();
     }
 
 }
